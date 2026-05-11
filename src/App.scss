@@ -195,7 +195,7 @@ body {
 .navbar {
   // position: fixed; /* يبقى في الأعلى دائماً */
   top: 0;
-  width: 100%;
+  // width: 100%;
   padding: 10px 0;
   // background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(8px);
@@ -266,4 +266,42 @@ body {
 /* لضمان عدم اختفاء الهيرو خلف الناف بار */
 .hero {
   padding-top: 150px;
+}
+
+/* تعديلات خاصة بالجوال (شاشات أصغر من 768px) */
+// @media (max-width: 768px) {
+//   .navbar .nav-container {
+//     max-width: 95%; /* إلغاء الـ 95% وجعلها تأخذ كامل العرض */
+//     // width: 100%; /* تأكيد العرض الكامل */
+//     // padding: 0 15px; /* إضافة حماية بسيطة للأطراف لكي لا يلتصق النص بالحافة */
+//   }
+
+//   .navbar .nav-links {
+//     // gap: 20px !important;
+//   }
+// }
+
+@media (max-width: 430px) {
+  .navbar .nav-links {
+    gap: 20px; /* تقليل القاب قليلاً ليعطي مساحة للكلمات */
+  }
+  .hero {
+    text-align: center;
+  }
+  .hero.title {
+    font-size: 70px;
+  }
+  .section-alt .intro-quote::before {
+    right: -40px;
+    top: -75px;
+    font-size: 130px;
+  }
+  .section-alt .intro-quote::after {
+    top: 555px;
+    font-size: 130px;
+  }
+  // .navbar .nav-links li a {
+  //   font-size: 14px; /* تصغير الخط درجة واحدة فقط ليناسب الجوال */
+  //   padding: 5px 2px; /* تقليل المسافات الجانبية */
+  // }
 }
