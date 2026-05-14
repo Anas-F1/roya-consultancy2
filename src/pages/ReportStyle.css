@@ -1,0 +1,64 @@
+/* src/pages/ReportTheme.css */
+
+/* نطبق المتغيرات فقط عند وجود هذا الكلاس */
+.report-page-wrapper {
+  --text: #6b6375;
+  --text-h: #08060d;
+  --bg: #fff;
+  --code-bg: #f4f3ec;
+  --accent: #aa3bff;
+  --shadow:
+    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+  --sans: "Tajawal", system-ui, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+
+  /* الإعدادات الأساسية للنص */
+  font: 18px/145% var(--sans);
+  letter-spacing: 0.18px;
+  color: var(--text);
+  background: var(--bg);
+  text-align: right; /* لضمان الاتجاه العربي */
+  direction: rtl;
+}
+
+/* تحديد عرض المحتوى كما في ملفك القديم */
+.report-page-wrapper .content-container {
+  width: 1126px;
+  max-width: 100%;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 0 20px;
+}
+
+/* تنسيق العناوين داخل التقرير فقط */
+.report-page-wrapper h1 {
+  font-size: 56px;
+  letter-spacing: -1.68px;
+  margin: 32px 0;
+  color: var(--text-h);
+  font-weight: 500;
+}
+
+.report-page-wrapper h2 {
+  font-size: 24px;
+  line-height: 118%;
+  color: var(--text-h);
+  margin: 0 0 8px;
+}
+
+.report-page-wrapper p {
+  margin: 0 0 15px 0;
+}
+
+/* التعامل مع الشاشات الصغيرة */
+@media (max-width: 1024px) {
+  .report-page-wrapper {
+    font-size: 16px;
+  }
+  .report-page-wrapper h1 {
+    font-size: 36px;
+  }
+}
